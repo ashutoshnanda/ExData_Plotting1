@@ -27,7 +27,7 @@ plot3 <- function() {
     sub.first.field <- "Sub_metering_1"
     sub.second.field <- "Sub_metering_2"
     sub.third.field <- "Sub_metering_3"
-    png(filename = "plot3.png")
+    png(filename = "plot3.png", bg = "transparent")
     with(powerusage, plot(get(time.field), get(sub.first.field),
               ylim = range(cbind(get(sub.first.field), 
                                  get(sub.second.field), 

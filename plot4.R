@@ -30,10 +30,10 @@ plot4 <- function() {
     sub.third.field <- "Sub_metering_3"
     voltage.field <- "Voltage"
     globalreactivepower.field <- "Global_reactive_power"
-    png(filename = "plot4.png")
+    png(filename = "plot4.png", bg = "transparent")
     par(mfcol = c(2, 2))
     plot(powerusage[[time.field]], powerusage[[globalactivepower.field]], 
-         type = "l", xlab = "", ylab = "Global Active Power (kilowatts)")
+         type = "l", xlab = "", ylab = "Global Active Power")
     
     with(powerusage, plot(get(time.field), get(sub.first.field),
               ylim = range(cbind(get(sub.first.field), 
@@ -47,7 +47,7 @@ plot4 <- function() {
     lines(powerusage[[time.field]], powerusage[[sub.third.field]], 
           col = "blue")    
     legend("topright", c(sub.first.field, sub.second.field, sub.third.field), 
-           lty = c(1,1,1), col = c("black", "red", "blue"))
+           lty = c(1,1,1), col = c("black", "red", "blue"), bty = "n")
     
     plot(powerusage[[time.field]], powerusage[[voltage.field]], 
          type = "l", xlab = "datetime", ylab = "Voltage")

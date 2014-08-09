@@ -25,9 +25,8 @@ plot2 <- function() {
     
     #Plotting code
     globalactivepower.field <- "Global_active_power"    
-    png(filename = "plot2.png")
+    png(filename = "plot2.png", bg = "transparent")
     plot(powerusage[[time.field]], powerusage[[globalactivepower.field]], 
-         type = "l", main = "Global Active Power", xlab = "", 
-         ylab = "Global Active Power (kilowatts)")
+         type = "l", xlab = "", ylab = "Global Active Power (kilowatts)")
     dev.off()
 }

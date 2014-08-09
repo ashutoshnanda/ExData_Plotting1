@@ -25,7 +25,7 @@ plot1 <- function() {
     
     #Plotting code
     globalactivepower.field <- "Global_active_power"
-    png(filename = "plot1.png")
+    png(filename = "plot1.png", bg = "transparent")
     hist(powerusage[[globalactivepower.field]], main = "Global Active Power", 
          xlab = "Global Active Power (kilowatts)", col = "red")
     dev.off()
